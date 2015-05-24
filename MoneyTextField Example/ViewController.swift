@@ -12,12 +12,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var moneyField: MoneyTextField!
     @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var localeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
         textChanged(nil)
+        
+        let locale = NSLocale.currentLocale()
+        localeLabel.text = locale.displayNameForKey(NSLocaleIdentifier, value: locale.localeIdentifier)
     }
 
     override func didReceiveMemoryWarning() {

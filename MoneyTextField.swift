@@ -56,7 +56,12 @@ class MoneyTextField: UITextField {
         let s = text as NSString
         let arr = s.componentsSeparatedByCharactersInSet(nonDecimal) as NSArray
         let n = arr.componentsJoinedByString("") as NSString
-        return NSNumber(double: n.doubleValue / 100)
+        return NSNumber(double: n.doubleValue / base)
+    }
+    
+    var base: Double {
+        let test = numberFormatter.stringFromNumber(NSNumber(int: 0))! as NSString
+        return test.containsString(".") || test.containsString(",") ? 100 : 1
     }
     
 }

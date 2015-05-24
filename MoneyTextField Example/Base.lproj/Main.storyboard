@@ -37,11 +37,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2B-eg-V9g">
+                                <rect key="frame" x="16" y="143" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NhN-Dy-c7q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gMu-7h-law" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1tV-bg-vgv"/>
+                            <constraint firstItem="u2B-eg-V9g" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5M3-om-Xic"/>
                             <constraint firstItem="3Bm-o1-0cx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BSk-n5-fRo"/>
+                            <constraint firstItem="u2B-eg-V9g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HbC-7J-DUF"/>
+                            <constraint firstItem="u2B-eg-V9g" firstAttribute="top" secondItem="gMu-7h-law" secondAttribute="bottom" constant="24" id="bHw-o3-OqJ"/>
                             <constraint firstItem="3Bm-o1-0cx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jrt-8K-skU"/>
                             <constraint firstItem="3Bm-o1-0cx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="nXU-gC-Yj8"/>
                             <constraint firstItem="gMu-7h-law" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="q53-FQ-FY3"/>
@@ -49,6 +61,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="localeLabel" destination="u2B-eg-V9g" id="pzT-Tb-Ya2"/>
                         <outlet property="moneyField" destination="3Bm-o1-0cx" id="VBz-eD-6HI"/>
                         <outlet property="moneyLabel" destination="gMu-7h-law" id="FIC-m9-BEh"/>
                     </connections>

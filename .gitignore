@@ -4,3 +4,5 @@ MoneyTextField.xcodeproj/xcuserdata/ahartford.xcuserdatad/xcschemes/MoneyTextFie
 MoneyTextField.xcodeproj/xcuserdata/ahartford.xcuserdatad/xcschemes/MoneyTextField.xcscheme
 
 MoneyTextField.xcodeproj/xcuserdata/ahartford.xcuserdatad/xcschemes/xcschememanagement.plist
+
+*.xcbkptlist
