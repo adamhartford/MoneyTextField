@@ -1,6 +1,6 @@
 //
-//  MoneyTextFieldTests.swift
-//  MoneyTextFieldTests
+//  MoneyTextField_ExampleTests.swift
+//  MoneyTextField ExampleTests
 //
 //  Created by Adam Hartford on 5/23/15.
 //  Copyright (c) 2015 Adam Hartford. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class MoneyTextFieldTests: XCTestCase {
+class MoneyTextField_ExampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
