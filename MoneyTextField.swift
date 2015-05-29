@@ -30,6 +30,7 @@ class MoneyTextField: UITextField {
         numberFormatter.numberStyle = .CurrencyStyle
         addTarget(self, action: "editingChanged", forControlEvents: .EditingChanged)
         
+        defaultColor = textColor
         text = format(numberFormatter.stringFromNumber(NSNumber(int: 0))!)
     }
     
