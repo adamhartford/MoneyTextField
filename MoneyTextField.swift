@@ -13,7 +13,16 @@ class MoneyTextField: UITextField {
     let nonDecimal = NSCharacterSet(charactersInString: "0123456789").invertedSet
     let numberFormatter = NSNumberFormatter()
     
+    var negative = false {
+        didSet {
+            text = format(numberFormatter.stringFromNumber(numberValue)!)
+        }
+    }
+    
     var prevRange: UITextRange?
+    var positiveColor = UIColor.greenColor()
+    var negativeColor = UIColor.redColor()
+    var defaultColor: UIColor!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -21,11 +30,11 @@ class MoneyTextField: UITextField {
         numberFormatter.numberStyle = .CurrencyStyle
         addTarget(self, action: "editingChanged", forControlEvents: .EditingChanged)
         
-        text = numberFormatter.stringFromNumber(NSNumber(int: 0))
+        text = format(numberFormatter.stringFromNumber(NSNumber(int: 0))!)
     }
     
     func editingChanged() {
-        text = numberFormatter.stringFromNumber(numberValue)
+        text = format(numberFormatter.stringFromNumber(numberValue)!)
         if let range = prevRange {
             selectedTextRange = range
             prevRange = nil
@@ -50,13 +59,34 @@ class MoneyTextField: UITextField {
         }
         
         text = numberFormatter.stringFromNumber(NSNumber(double: numberValue.doubleValue  / 10))
+        text = format(text)
+    }
+    
+    func format(s: String) -> String {
+        var val = numberValue.doubleValue
+        
+        if val == 0 {
+            textColor = defaultColor
+            return s
+        } else if !negative {
+            textColor = positiveColor
+            return s
+        } else {
+            textColor = negativeColor
+            return "(" + s.stringByReplacingOccurrencesOfString("-", withString: "") + ")"
+        }
     }
     
     var numberValue: NSNumber {
         let s = text as NSString
         let arr = s.componentsSeparatedByCharactersInSet(nonDecimal) as NSArray
         let n = arr.componentsJoinedByString("") as NSString
-        return NSNumber(double: n.doubleValue / base)
+        
+        var d = n.doubleValue / base
+        if d == -0 {
+            d = 0
+        }
+        return NSNumber(double: d)
     }
     
     var base: Double {
