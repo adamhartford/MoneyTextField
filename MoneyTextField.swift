@@ -19,6 +19,13 @@ class MoneyTextField: UITextField {
         }
     }
     
+    var locale = NSLocale.currentLocale() {
+        didSet {
+            numberFormatter.locale = locale
+            text = format(numberFormatter.stringFromNumber(numberValue)!)
+        }
+    }
+    
     var prevRange: UITextRange?
     var positiveColor = UIColor.greenColor()
     var negativeColor = UIColor.redColor()
@@ -83,7 +90,7 @@ class MoneyTextField: UITextField {
         let arr = s.componentsSeparatedByCharactersInSet(nonDecimal) as NSArray
         let n = arr.componentsJoinedByString("") as NSString
         
-        var d = n.doubleValue / base
+        var d = n.doubleValue / base * (negative ? -1 : 1)
         if d == -0 {
             d = 0
         }
