@@ -27,8 +27,10 @@ class MoneyTextField: UITextField {
     }
     
     var prevRange: UITextRange?
-    var positiveColor = UIColor.greenColor()
-    var negativeColor = UIColor.redColor()
+    // Flat color Nephritis
+    var positiveColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
+    // Flat color Pomegranate
+    var negativeColor = UIColor(red: 192/255, green: 57/255, blue: 43/255, alpha: 1)
     var defaultColor: UIColor!
     
     required init(coder aDecoder: NSCoder) {
