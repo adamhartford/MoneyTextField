@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MoneyTextField
 
 class ViewController: UIViewController {
     

@@ -8,18 +8,18 @@
 
 import UIKit
 
-class MoneyTextField: UITextField {
+public class MoneyTextField: UITextField {
     
     let nonDecimal = NSCharacterSet(charactersInString: "0123456789").invertedSet
     let numberFormatter = NSNumberFormatter()
     
-    var negative = false {
+    public var negative = false {
         didSet {
             text = format(numberFormatter.stringFromNumber(numberValue)!)
         }
     }
     
-    var locale = NSLocale.currentLocale() {
+    public var locale = NSLocale.currentLocale() {
         didSet {
             numberFormatter.locale = locale
             text = format(numberFormatter.stringFromNumber(numberValue)!)
@@ -28,12 +28,12 @@ class MoneyTextField: UITextField {
     
     var prevRange: UITextRange?
     // Flat color Nephritis
-    var positiveColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
+    public var positiveColor = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
     // Flat color Pomegranate
-    var negativeColor = UIColor(red: 192/255, green: 57/255, blue: 43/255, alpha: 1)
-    var defaultColor: UIColor!
+    public var negativeColor = UIColor(red: 192/255, green: 57/255, blue: 43/255, alpha: 1)
+    public var defaultColor: UIColor!
     
-    required init(coder aDecoder: NSCoder) {
+    public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         numberFormatter.numberStyle = .CurrencyStyle
@@ -51,7 +51,7 @@ class MoneyTextField: UITextField {
         }
     }
     
-    override func deleteBackward() {
+    public override func deleteBackward() {
         prevRange = selectedTextRange
         
         let loc = offsetFromPosition(beginningOfDocument, toPosition: selectedTextRange!.start)
@@ -68,14 +68,21 @@ class MoneyTextField: UITextField {
             return
         }
         
-        text = numberFormatter.stringFromNumber(NSNumber(double: numberValue.doubleValue  / 10))
-        text = format(text)
+        let temp = abs(numberValue.doubleValue / 10)
+        let s: NSString = "\(temp)"
+        let val = (s.substringToIndex(s.length - 1) as NSString).doubleValue
+        
+        text = format(numberFormatter.stringFromNumber(NSNumber(double: val))!, val: val)
+        sendActionsForControlEvents(UIControlEvents.EditingChanged)
     }
     
-    func format(s: String) -> String {
-        var val = numberValue.doubleValue
+    func format(s: String, val: Double? = nil) -> String {
+        var v = val
+        if v == nil {
+            v = numberValue.doubleValue
+        }
         
-        if val == 0 {
+        if v == 0 {
             textColor = defaultColor
             return s
         } else if !negative {
@@ -87,7 +94,7 @@ class MoneyTextField: UITextField {
         }
     }
     
-    var numberValue: NSNumber {
+    public var numberValue: NSNumber {
         let s = text as NSString
         let arr = s.componentsSeparatedByCharactersInSet(nonDecimal) as NSArray
         let n = arr.componentsJoinedByString("") as NSString
