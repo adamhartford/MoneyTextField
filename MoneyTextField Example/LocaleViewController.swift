@@ -12,11 +12,11 @@ class LocaleViewController: UITableViewController {
 
     var didSelectLocale: ((NSLocale) -> ())?
 
-    var identifiers = NSLocale.availableLocaleIdentifiers() as! [String]
+    var identifiers = NSLocale.availableLocaleIdentifiers() 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        identifiers.sort { $0 < $1 }
+        identifiers.sortInPlace { $0 < $1 }
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +35,7 @@ class LocaleViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) 
 
         let identifier = identifiers[indexPath.row]
         let name = NSLocale.currentLocale().displayNameForKey(NSLocaleIdentifier, value: identifier)!

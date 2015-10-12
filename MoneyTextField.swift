@@ -33,7 +33,7 @@ public class MoneyTextField: UITextField {
     public var negativeColor = UIColor(red: 192/255, green: 57/255, blue: 43/255, alpha: 1)
     var defaultColor: UIColor!
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         numberFormatter.numberStyle = .CurrencyStyle
@@ -58,7 +58,7 @@ public class MoneyTextField: UITextField {
         
         let selection = textInRange(selectedTextRange!)
         if selection == "" {
-            let prev = (text as NSString).characterAtIndex(loc - 1)
+            let prev = (text! as NSString).characterAtIndex(loc - 1)
             if prev >= 48 && prev <= 57 { // ASCII characters 0...9
                 super.deleteBackward()
                 return
@@ -95,7 +95,7 @@ public class MoneyTextField: UITextField {
     }
     
     public var numberValue: NSNumber {
-        let s = text as NSString
+        let s = text! as NSString
         let arr = s.componentsSeparatedByCharactersInSet(nonDecimal) as NSArray
         let n = arr.componentsJoinedByString("") as NSString
         

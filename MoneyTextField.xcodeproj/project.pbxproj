@@ -13,7 +13,6 @@
 		5B59A7F41B11550A00568F19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B59A7F21B11550A00568F19 /* Main.storyboard */; };
 		5B59A7F61B11550A00568F19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B59A7F51B11550A00568F19 /* Images.xcassets */; };
 		5B59A7F91B11550A00568F19 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B59A7F71B11550A00568F19 /* LaunchScreen.xib */; };
-		5B59A8051B11550A00568F19 /* MoneyTextField_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59A8041B11550A00568F19 /* MoneyTextField_ExampleTests.swift */; };
 		5BA2EBF31B1EB1DF00F96C94 /* MoneyTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BA2EBF21B1EB1DF00F96C94 /* MoneyTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BA2EBF91B1EB1DF00F96C94 /* MoneyTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA2EBEE1B1EB1DF00F96C94 /* MoneyTextField.framework */; };
 		5BA2EC021B1EB1DF00F96C94 /* MoneyTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2EC011B1EB1DF00F96C94 /* MoneyTextFieldTests.swift */; };
@@ -22,13 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5B59A7FF1B11550A00568F19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B59A7B91B1154D400568F19 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5B59A7E91B11550A00568F19;
-			remoteInfo = "MoneyTextField Example";
-		};
 		5BA2EBFA1B1EB1DF00F96C94 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5B59A7B91B1154D400568F19 /* Project object */;
@@ -74,7 +66,6 @@
 		5B59A7F31B11550A00568F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B59A7F51B11550A00568F19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5B59A7F81B11550A00568F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5B59A7FE1B11550A00568F19 /* MoneyTextField ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MoneyTextField ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B59A8031B11550A00568F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B59A8041B11550A00568F19 /* MoneyTextField_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTextField_ExampleTests.swift; sourceTree = "<group>"; };
 		5B59A80D1B11551E00568F19 /* MoneyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyTextField.swift; sourceTree = SOURCE_ROOT; };
@@ -92,13 +83,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BA2EC051B1EB1DF00F96C94 /* MoneyTextField.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B59A7FB1B11550A00568F19 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				5B59A7EA1B11550A00568F19 /* MoneyTextField Example.app */,
-				5B59A7FE1B11550A00568F19 /* MoneyTextField ExampleTests.xctest */,
 				5BA2EBEE1B1EB1DF00F96C94 /* MoneyTextField.framework */,
 				5BA2EBF81B1EB1DF00F96C94 /* MoneyTextFieldTests.xctest */,
 			);
@@ -249,24 +232,6 @@
 			productReference = 5B59A7EA1B11550A00568F19 /* MoneyTextField Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5B59A7FD1B11550A00568F19 /* MoneyTextField ExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5B59A8091B11550A00568F19 /* Build configuration list for PBXNativeTarget "MoneyTextField ExampleTests" */;
-			buildPhases = (
-				5B59A7FA1B11550A00568F19 /* Sources */,
-				5B59A7FB1B11550A00568F19 /* Frameworks */,
-				5B59A7FC1B11550A00568F19 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5B59A8001B11550A00568F19 /* PBXTargetDependency */,
-			);
-			name = "MoneyTextField ExampleTests";
-			productName = "MoneyTextField ExampleTests";
-			productReference = 5B59A7FE1B11550A00568F19 /* MoneyTextField ExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		5BA2EBED1B1EB1DF00F96C94 /* MoneyTextField */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BA2EC0B1B1EB1DF00F96C94 /* Build configuration list for PBXNativeTarget "MoneyTextField" */;
@@ -310,15 +275,13 @@
 		5B59A7B91B1154D400568F19 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Adam Hartford";
 				TargetAttributes = {
 					5B59A7E91B11550A00568F19 = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					5B59A7FD1B11550A00568F19 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = 5B59A7E91B11550A00568F19;
 					};
 					5BA2EBED1B1EB1DF00F96C94 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -343,7 +306,6 @@
 			projectRoot = "";
 			targets = (
 				5B59A7E91B11550A00568F19 /* MoneyTextField Example */,
-				5B59A7FD1B11550A00568F19 /* MoneyTextField ExampleTests */,
 				5BA2EBED1B1EB1DF00F96C94 /* MoneyTextField */,
 				5BA2EBF71B1EB1DF00F96C94 /* MoneyTextFieldTests */,
 			);
@@ -358,13 +320,6 @@
 				5B59A7F41B11550A00568F19 /* Main.storyboard in Resources */,
 				5B59A7F91B11550A00568F19 /* LaunchScreen.xib in Resources */,
 				5B59A7F61B11550A00568F19 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B59A7FC1B11550A00568F19 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,14 +350,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B59A7FA1B11550A00568F19 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5B59A8051B11550A00568F19 /* MoneyTextField_ExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5BA2EBE91B1EB1DF00F96C94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,11 +369,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5B59A8001B11550A00568F19 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5B59A7E91B11550A00568F19 /* MoneyTextField Example */;
-			targetProxy = 5B59A7FF1B11550A00568F19 /* PBXContainerItemProxy */;
-		};
 		5BA2EBFB1B1EB1DF00F96C94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5BA2EBED1B1EB1DF00F96C94 /* MoneyTextField */;
@@ -485,6 +427,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -557,6 +500,7 @@
 				);
 				INFOPLIST_FILE = "MoneyTextField Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adamhartford.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -567,41 +511,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MoneyTextField Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adamhartford.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		5B59A80A1B11550A00568F19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "MoneyTextField ExampleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyTextField Example.app/MoneyTextField Example";
-			};
-			name = Debug;
-		};
-		5B59A80B1B11550A00568F19 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "MoneyTextField ExampleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyTextField Example.app/MoneyTextField Example";
 			};
 			name = Release;
 		};
@@ -620,6 +531,7 @@
 				INFOPLIST_FILE = MoneyTextField/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adamhartford.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -638,6 +550,7 @@
 				INFOPLIST_FILE = MoneyTextField/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adamhartford.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -658,6 +571,7 @@
 				);
 				INFOPLIST_FILE = MoneyTextFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adamhartford.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyTextField Example.app/MoneyTextField Example";
 			};
@@ -672,6 +586,7 @@
 				);
 				INFOPLIST_FILE = MoneyTextFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adamhartford.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyTextField Example.app/MoneyTextField Example";
 			};
@@ -698,15 +613,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B59A8091B11550A00568F19 /* Build configuration list for PBXNativeTarget "MoneyTextField ExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5B59A80A1B11550A00568F19 /* Debug */,
-				5B59A80B1B11550A00568F19 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5BA2EC0B1B1EB1DF00F96C94 /* Build configuration list for PBXNativeTarget "MoneyTextField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -714,6 +620,7 @@
 				5BA2EC081B1EB1DF00F96C94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BA2EC0D1B1EB1DF00F96C94 /* Build configuration list for PBXNativeTarget "MoneyTextFieldTests" */ = {
 			isa = XCConfigurationList;
@@ -722,6 +629,7 @@
 				5BA2EC0A1B1EB1DF00F96C94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
